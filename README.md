@@ -9,8 +9,8 @@
 - 捕食者と被食者との距離が一定値以下になったときに、捕食さ れたとみなす
   
 ２体の捕食者は囲い込み、挟み込み、包囲など協調して追跡し、100個体の被食者は集結、散開、回避などの戦術を用いて逃走する生存競争を繰り広げる
-  
+  <img width="600" height="600" alt="fsm_optimized_ga" src="https://github.com/user-attachments/assets/2c791fa7-1444-4bcd-a597-450ee597dd8d" />
 
-<img width="500" height="500" alt="Figure1_pipeline" src="https://github.com/user-attachments/assets/b67be67d-f359-430c-9f00-923536b9ca53" />
+<img width="300" height="300" alt="Figure1_pipeline" src="https://github.com/user-attachments/assets/b67be67d-f359-430c-9f00-923536b9ca53" />
 
 
