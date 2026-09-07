@@ -11,5 +11,6 @@
 ２体の捕食者は囲い込み、挟み込み、包囲など協調して追跡し、100個体の被食者は集結、散開、回避などの戦術を用いて逃走する生存競争を繰り広げる
   
 
+<img width="2250" height="2700" alt="Figure1_pipeline" src="https://github.com/user-attachments/assets/b67be67d-f359-430c-9f00-923536b9ca53" />
 
 
