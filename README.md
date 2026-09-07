@@ -21,6 +21,6 @@ FSM が定義する戦術構造（＝行動モード＋遷移＋Boids 重み）�
   
 この「FSM（意思決定） × Boids（運動生成）」の2層構造により、自然な群れ運動と戦術的な意思決定が同時に成立し、リアルな生態系行動が実現される
 
-<img width="400" height="449" alt="fsm_boid" src="https://github.com/user-attachments/assets/922a7eb8-ce49-4d4f-8744-44c88f022558" />
+<img width="200" height="249" alt="fsm_boid" src="https://github.com/user-attachments/assets/922a7eb8-ce49-4d4f-8744-44c88f022558" />
 
 
