@@ -41,5 +41,5 @@ GA：行動パラメータを最適化
 
 名前はラベルにすぎない 
 → 行動の意味は GA/LLM によって世代ごとに進化する
+<img width="600" height="240" alt="fsm_fig1" src="https://github.com/user-attachments/assets/1cfaab5d-f6db-46d9-993b-23ac53a1f19b" />
 
-<img width="440" height="530" alt="fsm_fig1" src="https://github.com/user-attachments/assets/17c32add-8700-4412-b240-bda7a9038eab" />
