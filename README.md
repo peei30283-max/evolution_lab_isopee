@@ -23,4 +23,4 @@ FSM が定義する戦術構造（＝行動モード＋遷移＋Boids 重み）�
 
 <img width="200" height="249" alt="fsm_boid" src="https://github.com/user-attachments/assets/922a7eb8-ce49-4d4f-8744-44c88f022558" />
 
-
+<img width="880" height="460" alt="fsm_fig1" src="https://github.com/user-attachments/assets/17c32add-8700-4412-b240-bda7a9038eab" />
