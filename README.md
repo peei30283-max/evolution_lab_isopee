@@ -21,7 +21,7 @@ FSM が定義する戦術構造（＝行動モード＋遷移＋Boids 重み）�
   
 この「FSM（意思決定） × Boids（運動生成）」の2層構造により、自然な群れ運動と戦術的な意思決定が同時に成立し、リアルな生態系行動が実現される
 
-<img width="200" height="249" alt="fsm_boid" src="https://github.com/user-attachments/assets/922a7eb8-ce49-4d4f-8744-44c88f022558" />
+<img width="250" height="280" alt="fsm_boid" src="https://github.com/user-attachments/assets/922a7eb8-ce49-4d4f-8744-44c88f022558" />
 
 #### ■ FSM(有限ステートマシーン) の状態 (=行動モード)
 行動モードは FSM の固定プリミティブ 
@@ -41,5 +41,5 @@ GA：行動パラメータを最適化
 
 名前はラベルにすぎない 
 → 行動の意味は GA/LLM によって世代ごとに進化する
-<img width="600" height="240" alt="fsm_fig1" src="https://github.com/user-attachments/assets/1cfaab5d-f6db-46d9-993b-23ac53a1f19b" />
+<img width="800" height="300" alt="fsm_fig1" src="https://github.com/user-attachments/assets/1cfaab5d-f6db-46d9-993b-23ac53a1f19b" />
 
