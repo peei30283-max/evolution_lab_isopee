@@ -39,5 +39,6 @@ FSM が定義する戦術構造（＝行動モード＋遷移＋Boids 重み）�
 ● 名前はラベルにすぎない 
 → 行動の意味は GA/LLM によって世代ごとに進化する
 
-<img width="800" height="300" alt="fsm_fig1" src="https://github.com/user-attachments/assets/1cfaab5d-f6db-46d9-993b-23ac53a1f19b" />
+<img width="1257" height="473" alt="fsm_fig1" src="https://github.com/user-attachments/assets/dd4120ea-92b9-4149-a357-b42fec34c2ed" />
+
 
