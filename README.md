@@ -24,4 +24,22 @@ FSM が定義する戦術構造（＝行動モード＋遷移＋Boids 重み）�
 <img width="200" height="249" alt="fsm_boid" src="https://github.com/user-attachments/assets/922a7eb8-ce49-4d4f-8744-44c88f022558" />
 
 #### ■ FSM(有限ステートマシーン) の状態 (=行動モード)
-<img width="440" height="230" alt="fsm_fig1" src="https://github.com/user-attachments/assets/17c32add-8700-4412-b240-bda7a9038eab" />
+行動モードは FSM の固定プリミティブ 
+（探索空間爆発を防ぐため固定）
+
+進化するのはモードの意味
+Boids 重み
+遷移条件
+役割との組み合わせ
+使われ方（どの状況で発火するか）
+
+LLM：行動モードの構造的な使い方を生成 
+（遷移・重み・役割の組み合わせ）
+
+GA：行動パラメータを最適化 
+（Boids 重み・遷移条件・役割条件）
+
+名前はラベルにすぎない 
+→ 行動の意味は GA/LLM によって世代ごとに進化する
+
+<img width="440" height="530" alt="fsm_fig1" src="https://github.com/user-attachments/assets/17c32add-8700-4412-b240-bda7a9038eab" />
