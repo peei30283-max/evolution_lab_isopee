@@ -67,4 +67,4 @@ FSM の状態・遷移を GA が進化させ、戦術を最適化する
 5. LLM による戦術改善
 改善点の情報を LLM に渡し、新しい戦術を生成する
 
-<img width="350" height="531" alt="evolution_cycle" src="https://github.com/user-attachments/assets/4d721de2-e3c5-458b-8bb4-09d60c2b0112" />
+<img width="250" height="400" alt="evolution_cycle" src="https://github.com/user-attachments/assets/4d721de2-e3c5-458b-8bb4-09d60c2b0112" />
