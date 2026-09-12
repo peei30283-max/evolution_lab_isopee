@@ -11,7 +11,8 @@
   
 ２体の捕食者は囲い込み、挟み込み、包囲など協調して追跡し、100個体の被食者は集結、散開、回避などの戦術を用いて逃走する生存競争を繰り広げる
 
-<img width="600" height="349" alt="fsm_boid" src="https://github.com/user-attachments/assets/56906d75-d253-4a9a-b8aa-2a1d312d4929" />
+<img width="300" height="300" alt="fsm_optimized_ga" src="https://github.com/user-attachments/assets/d8089a94-20a7-4fab-9299-1e1be0bf13e4" />
+
 
 ### ■ Boidモデル + FSM（有限ステートマシーン）
 Boids は、エージェント（＝FSM が選択した行動モードに従って動く個体）の連続的な運動を生成する下層モデル  
@@ -21,8 +22,20 @@ FSM が定義する戦術構造（＝行動モード＋遷移＋Boids 重み）�
   
 この「FSM（意思決定） × Boids（運動生成）」の2層構造により、自然な群れ運動と戦術的な意思決定が同時に成立し、リアルな生態系行動が実現される
 
-<img width="250" height="280" alt="fsm_boid" src="https://github.com/user-attachments/assets/922a7eb8-ce49-4d4f-8744-44c88f022558" />
+<img width="600" height="349" alt="fsm_boid" src="https://github.com/user-attachments/assets/56906d75-d253-4a9a-b8aa-2a1d312d4929" />
+#### ■ FSMFSM（有限ステートマシーン）の構造
 
+状態（State）：エージェントが現在とっている行動モード
+例：探索・追跡・回避・再集結など
+
+ 遷移（Transition）：状態を切り替えるためのルール
+距離・密度・角度などの環境特徴量に応じて発火
+
+遷移条件（Condition）：遷移が起こる条件を定義する論理式
+行動切替のタイミングを制御し、戦術の多様性を生む
+
+構造（Topology）：どの状態からどの状態へ遷移できるかを
+　定めるネットワーク。戦術の“骨格”となり、行動の可能性空間を規定
 #### ■ FSM(有限ステートマシーン) の状態 (=行動モード)
 行動モードは FSM の固定プリミティブ 
 （探索空間爆発を防ぐため固定）
