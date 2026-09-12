@@ -43,7 +43,7 @@ FSM が定義する戦術構造（＝行動モード＋遷移＋Boids 重み）�
 → 行動の意味は GA/LLM によって世代ごとに進化する  
 
 
-<img width="1100" height="450" alt="fsm_fig1" src="https://github.com/user-attachments/assets/dd4120ea-92b9-4149-a357-b42fec34c2ed" />
+<img width="1000" height="420" alt="fsm_fig1" src="https://github.com/user-attachments/assets/dd4120ea-92b9-4149-a357-b42fec34c2ed" />
 
 #### ■ FSM–GA–LLM の３層構造による戦術進化システム
 <img width="600" height="280" alt="llm_loop" src="https://github.com/user-attachments/assets/c88bca47-96fc-443b-83b8-0acd65e83925" />
