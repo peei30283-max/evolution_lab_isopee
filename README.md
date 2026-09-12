@@ -11,7 +11,7 @@
   
 ２体の捕食者は囲い込み、挟み込み、包囲など協調して追跡し、100個体の被食者は集結、散開、回避などの戦術を用いて逃走する生存競争を繰り広げる
 
-<img width="300" height="549" alt="fsm_boid" src="https://github.com/user-attachments/assets/56906d75-d253-4a9a-b8aa-2a1d312d4929" />
+<img width="600" height="349" alt="fsm_boid" src="https://github.com/user-attachments/assets/56906d75-d253-4a9a-b8aa-2a1d312d4929" />
 
 ### ■ Boidモデル + FSM（有限ステートマシーン）
 Boids は、エージェント（＝FSM が選択した行動モードに従って動く個体）の連続的な運動を生成する下層モデル  
