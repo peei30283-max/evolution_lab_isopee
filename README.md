@@ -45,4 +45,7 @@ FSM が定義する戦術構造（＝行動モード＋遷移＋Boids 重み）�
 
 <img width="1257" height="473" alt="fsm_fig1" src="https://github.com/user-attachments/assets/dd4120ea-92b9-4149-a357-b42fec34c2ed" />
 
+#### ■ FSM–GA–LLM の３層構造による戦術進化システム
+<img width="857" height="363" alt="llm_loop" src="https://github.com/user-attachments/assets/c88bca47-96fc-443b-83b8-0acd65e83925" />
 
+このFSM–GA–LLM の 3層構造は、FSM は階層化・拡張が容易で、LLM は構造生成に強く、GA は数値最適化に強いので、この役割分担により、状態数の増加・多エージェント化・長期戦略化など、より複雑なシステムにも拡張可能。
