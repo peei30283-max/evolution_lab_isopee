@@ -49,3 +49,22 @@ FSM が定義する戦術構造（＝行動モード＋遷移＋Boids 重み）�
 <img width="600" height="280" alt="llm_loop" src="https://github.com/user-attachments/assets/c88bca47-96fc-443b-83b8-0acd65e83925" />
 
 このFSM–GA–LLM の 3層構造は、FSM は階層化・拡張が容易で、LLM は構造生成に強く、GA は数値最適化に強いので、この役割分担により、状態数の増加・多エージェント化・長期戦略化など、より複雑なシステムにも拡張可能。
+
+#### ■ メタ進化ループの処理の流れ
+1. FSM 生成 (のみ）
+進化ループの初回は LLM が初期条件や設計方針を元にFSMを生成する
+2 回目以降はLLMの戦術改善情報を元に FSMを更新
+
+2. FSM のパラメータを GA による最適化
+FSM の状態・遷移を GA が進化させ、戦術を最適化する
+
+3. シミュレーションと性能評価
+捕食者と群れの相互作用、捕獲率・生存時間などを評。
+
+4. 問題点の分析
+評価結果と動作ログから、戦術の問題点や改善点を抽出
+
+5. LLM による戦術改善
+改善点の情報を LLM に渡し、新しい戦術を生成する
+
+<img width="350" height="531" alt="evolution_cycle" src="https://github.com/user-attachments/assets/4d721de2-e3c5-458b-8bb4-09d60c2b0112" />
