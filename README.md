@@ -5,7 +5,8 @@
 ### 関連論文
 [人工知能学会_2026全国大会論文_五十崎 SIG-ALife-2026-01, 2026](https://github.com/user-attachments/files/32148555/_2026._._final.pdf)  
 [人工知能学会_2026全国大会_発表資料_2026/06/11](https://github.com/user-attachments/files/32796572/_._._2026_06_11.pdf)　
-[用語集](https://github.com/user-attachments/files/32801169/Gllossary.pdf)
+
+[用語集](https://github.com/user-attachments/files/32801169/Gllossary.pdf)　
 
 ## 大規模言語モデルを用いた戦術FSM生成と共進化的最適化による捕食者–群れ戦術の自動設計
 ### 捕食者と群れがAI が作る“進化する戦術”で戦う世界
@@ -21,7 +22,8 @@ GUARDIAN が捕獲された場合、捕獲した Predator の速度・旋回性�
 Kids を捕食した場合は一般個体を捕食した場合の 2.5 倍の報酬が Predator に与えられる。　
 
  ### ■ シミュレーション結果
- この図は、世代進化サイクルを gen0 から gen9 まで 10 サイクル実行した結果のうち、 gen0, gen2, gen5, gen8 のシミュレーション結果の捕食者と被食者の動きを示す。
+ この図は、世代進化サイクルを gen0 から gen9 まで 10 サイクル実行した結果のうち、 gen0, gen2, gen5, gen8 のシミュレーション結果の捕食者と被食者の動きを示す　
+ 
 <img width="600" height="650" alt="compare_optimized_0_2_5_8" src="https://github.com/user-attachments/assets/7a22744f-6e30-4741-9057-edb69e44632b" />
 
 ■ 図に描かれている「形のドット・記号」の意味  
