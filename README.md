@@ -18,8 +18,10 @@
 被食者(Prey) のうち ４4体を Kids として固定し、速度・旋回性能が通常個体の 85% に設定された弱者クラスを導入する。 
 GUARDIANは Kids と 捕食者(Predator) の間に位置する Prey が 最大 3 個体が自動任命され、密度維持・遮断行動を通じて Kids を保護する。 
 GUARDIAN が捕獲された場合、捕獲した Predator の速度・旋回性能は一定期間 20% に低下する。 
-Kids を捕食した場合は一般個体を捕食した場合の 2.5 倍の報酬が Predator に与えられる。 
- 　
+Kids を捕食した場合は一般個体を捕食した場合の 2.5 倍の報酬が Predator に与えられる。
+
+ ### ■ シミュレーション結果
+ この図は、世代進化サイクルを gen0 から gen9 まで 10 サイクル実行した結果のうち、 gen0, gen2, gen5, gen8 のシミュレーション結果の捕食者と被食者の動きを表示した。
 <img width="600" height="650" alt="compare_optimized_0_2_5_8" src="https://github.com/user-attachments/assets/7a22744f-6e30-4741-9057-edb69e44632b" />
 
 ■ 図に描かれている「形のドット・記号」の意味  
