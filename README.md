@@ -19,7 +19,7 @@
 GUARDIANは Kids と 捕食者(Predator) の間に位置する Prey が 最大 3 個体が自動任命され、密度維持・遮断行動を通じて Kids を保護する。 
 GUARDIAN が捕獲された場合、捕獲した Predator の速度・旋回性能は一定期間 20% に低下する。 
 Kids を捕食した場合は一般個体を捕食した場合の 2.5 倍の報酬が Predator に与えられる。 
- 
+ 　
 <img width="600" height="650" alt="compare_optimized_0_2_5_8" src="https://github.com/user-attachments/assets/7a22744f-6e30-4741-9057-edb69e44632b" />
 
 ■ 図に描かれている「形のドット・記号」の意味  
@@ -33,11 +33,11 @@ Kids を捕食した場合は一般個体を捕食した場合の 2.5 倍の報�
 ② 捕食者近く: 捕食者 FSM の現在状態  
 ③ 図下部の 3 行: 戦術ラベル  
 
-#### ■ 協調行動
-２体の捕食者は一方が囮役となって群れを追いこむ戦術をとることもある。
-
-被食者の群れには運動性能が低い Kids (弱者）が 4体含まれる。この Kids を
-<img width="600" height="284" alt="Decoy_Guardian" src="https://github.com/user-attachments/assets/aba73ab1-9e8e-496f-af38-7d657be1217b" />
+#### ■ 協調行動 (DECOY / GUARDIAN)
+・２体の捕食者は一方が囮役となって群れを追いこむ戦術をとる（進化の過程で自然発生）
+・被食者の群れには運動性能が低い Kids (弱者）が 4体含まれる。この Kids を守護する GUARDIAN が任命され、Kids を捕食者から守る行動をとる
+　　
+<img width="600" height="300" alt="Decoy_Guardian" src="https://github.com/user-attachments/assets/aba73ab1-9e8e-496f-af38-7d657be1217b" />
 
 ### ■ Boidモデル + FSM（有限ステートマシーン）
 Boids は、エージェント（＝FSM が選択した行動モードに従って動く個体）の連続的な運動を生成する下層モデル  
@@ -47,9 +47,7 @@ FSM が定義する戦術構造（＝行動モード＋遷移＋Boids 重み）�
 この「FSM（意思決定） × Boids（運動生成）」の2層構造により、自然な群れ運動と戦術的な意思決定が同時に成立し、リアルな生態系行動が実現される
 なお、捕食者と被食者はそれぞれ１つの行動モードで動き、瞬時に同時に切りわかる（モデルの簡略化のため個体間での通信コミュニケーション遅延は０とする）
 <img width="600" height="349" alt="fsm_boid" src="https://github.com/user-attachments/assets/56906d75-d253-4a9a-b8aa-2a1d312d4929" />
-
-
-
+　
 #### ■ FSMFSM（有限ステートマシーン）の構造
 状態（State）：エージェントが現在とっている行動モード  例：探索・追跡・回避・再集結など  
 遷移（Transition）：状態を切り替えるためのルール / 距離・密度・角度などの環境特徴量に応じて発火  
@@ -67,8 +65,7 @@ FSM が定義する戦術構造（＝行動モード＋遷移＋Boids 重み）�
 （Boids 重み・遷移条件・役割条件）  
 ● 名前はラベルにすぎない 
 → 行動の意味は GA/LLM によって世代ごとに進化する  
-
-
+　
 <img width="1000" height="420" alt="fsm_fig1" src="https://github.com/user-attachments/assets/dd4120ea-92b9-4149-a357-b42fec34c2ed" />
 
 #### ■ FSM–GA–LLM の３層構造による戦術進化システム
