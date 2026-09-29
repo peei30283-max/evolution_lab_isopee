@@ -5,6 +5,7 @@
 ### 関連論文
 [人工知能学会_2026全国大会論文_五十崎 SIG-ALife-2026-01, 2026](https://github.com/user-attachments/files/32148555/_2026._._final.pdf)  
 [人工知能学会_2026全国大会_発表資料_2026/06/11](https://github.com/user-attachments/files/32796572/_._._2026_06_11.pdf)
+[用語集](https://github.com/user-attachments/files/32801169/Gllossary.pdf)
 
 ## 大規模言語モデルを用いた戦術FSM生成と共進化的最適化による捕食者–群れ戦術の自動設計
 ### 捕食者と群れがAI が作る“進化する戦術”で戦う世界
@@ -18,6 +19,7 @@
 GUARDIANは Kids と 捕食者(Predator) の間に位置する Prey が自動任命され、密度維持・遮断行動を通じて Kids を保護する。 
 GUARDIAN が捕獲された場合、捕獲した Predator の速度・旋回性能は一定期間 20% に低下する。 
 Kids を捕食した場合は一般個体を捕食した場合の 2.5 倍の報酬が Predator に与えられる。 
+ 
 <img width="600" height="650" alt="compare_optimized_0_2_5_8" src="https://github.com/user-attachments/assets/7a22744f-6e30-4741-9057-edb69e44632b" />
 
 ■ 図に描かれている「形のドット・記号」の意味  
@@ -40,6 +42,10 @@ FSM が定義する戦術構造（＝行動モード＋遷移＋Boids 重み）�
 この「FSM（意思決定） × Boids（運動生成）」の2層構造により、自然な群れ運動と戦術的な意思決定が同時に成立し、リアルな生態系行動が実現される
 なお、捕食者と被食者はそれぞれ１つの行動モードで動き、瞬時に同時に切りわかる（モデルの簡略化のため個体間での通信コミュニケーション遅延は０とする）
 <img width="600" height="349" alt="fsm_boid" src="https://github.com/user-attachments/assets/56906d75-d253-4a9a-b8aa-2a1d312d4929" />
+
+#### ■ 協調行動
+<img width="600" height="284" alt="Decoy_Guardian" src="https://github.com/user-attachments/assets/aba73ab1-9e8e-496f-af38-7d657be1217b" />
+
 
 #### ■ FSMFSM（有限ステートマシーン）の構造
 状態（State）：エージェントが現在とっている行動モード  例：探索・追跡・回避・再集結など  
