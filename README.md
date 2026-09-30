@@ -44,12 +44,6 @@ Kids を捕食した場合は一般個体を捕食した場合の 2.5 倍の報�
 　　
 <img width="600" height="300" alt="Decoy_Guardian" src="https://github.com/user-attachments/assets/aba73ab1-9e8e-496f-af38-7d657be1217b" />
 
-#### ■ 戦術進化ツリー (捕食者:Predator / 被食者:Prey)
-<img width="650" height="800" alt="lineage_tree_ev0-9_predator" src="https://github.com/user-attachments/assets/c8b3c31f-c546-4e15-8057-46c7e9d23938" />
-
-<img width="650" height="550" alt="lineage_tree_ev0-9_prey" src="https://github.com/user-attachments/assets/786c4256-bd1d-41b5-9f66-f647a5d8ed45" />
-
-
 
 ### ■ Boidモデル + FSM（有限ステートマシーン）
 Boids は、エージェント（＝FSM が選択した行動モードに従って動く個体）の連続的な運動を生成する下層モデル  
@@ -128,6 +122,11 @@ FSM の状態・遷移を GA が進化させ、戦術を最適化する
 改善点の情報を LLM に渡し、新しい戦術を生成する
 
 <img width="250" height="400" alt="evolution_cycle" src="https://github.com/user-attachments/assets/4d721de2-e3c5-458b-8bb4-09d60c2b0112" />
+
+#### ■ 戦術進化ツリー (捕食者:Predator / 被食者:Prey)
+<img width="650" height="800" alt="lineage_tree_ev0-9_predator" src="https://github.com/user-attachments/assets/c8b3c31f-c546-4e15-8057-46c7e9d23938" />
+
+<img width="650" height="550" alt="lineage_tree_ev0-9_prey" src="https://github.com/user-attachments/assets/786c4256-bd1d-41b5-9f66-f647a5d8ed45" />
 
 #### ■ 捕食者と被食者の共進化 GA（Co-evolution GA）
 本研究では、捕食者と被食者が互いの戦術に適応し続ける“共進化 GA（Co-evolution GA）” を採用している 
