@@ -1,10 +1,11 @@
-
-
 # 進化サイエンス・ラボ
 進化過程に関する研究・シミュレーション  
 ### 関連論文
 [人工知能学会_2026全国大会論文_五十崎 SIG-ALife-2026-01, 2026](https://github.com/user-attachments/files/32148555/_2026._._final.pdf)  
 [人工知能学会_2026全国大会_発表資料_2026/06/11](https://github.com/user-attachments/files/32796572/_._._2026_06_11.pdf)　
+
+[本研究で採用している GA (LLM 誘導型進化:LGI）の特徴](https://github.com/user-attachments/files/32858451/GA_process.pdf)
+
 
 [用語集](https://github.com/user-attachments/files/32801169/Gllossary.pdf)　
 
@@ -42,6 +43,13 @@ Kids を捕食した場合は一般個体を捕食した場合の 2.5 倍の報�
 ・被食者の群れには運動性能が低い Kids (弱者）が 4体含まれる。この Kids を守護する GUARDIAN が任命され、Kids を捕食者から守る行動をとる
 　　
 <img width="600" height="300" alt="Decoy_Guardian" src="https://github.com/user-attachments/assets/aba73ab1-9e8e-496f-af38-7d657be1217b" />
+
+#### ■ 戦術進化ツリー (捕食者:Predator / 被食者:Prey)
+<img width="650" height="800" alt="lineage_tree_ev0-9_predator" src="https://github.com/user-attachments/assets/c8b3c31f-c546-4e15-8057-46c7e9d23938" />
+
+<img width="650" height="550" alt="lineage_tree_ev0-9_prey" src="https://github.com/user-attachments/assets/786c4256-bd1d-41b5-9f66-f647a5d8ed45" />
+
+
 
 ### ■ Boidモデル + FSM（有限ステートマシーン）
 Boids は、エージェント（＝FSM が選択した行動モードに従って動く個体）の連続的な運動を生成する下層モデル  
