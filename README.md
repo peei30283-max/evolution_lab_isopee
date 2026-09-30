@@ -4,7 +4,7 @@
 [人工知能学会_2026全国大会論文_五十崎 SIG-ALife-2026-01, 2026](https://github.com/user-attachments/files/32148555/_2026._._final.pdf)  
 [人工知能学会_2026全国大会_発表資料_2026/06/11](https://github.com/user-attachments/files/32796572/_._._2026_06_11.pdf)　
 
-[本研究で採用している進化系ロジック (LLM 誘導型進化:LGI）の特徴](https://github.com/user-attachments/files/32858451/GA_process.pdf)
+[本研究で採用している遺伝的アルゴリズム (LLM 誘導型進化:LGI）の特徴](https://github.com/user-attachments/files/32858451/GA_process.pdf)
 
 
 [用語集](https://github.com/user-attachments/files/32801169/Gllossary.pdf)　
