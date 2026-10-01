@@ -124,9 +124,9 @@ FSM の状態・遷移を GA が進化させ、戦術を最適化する
 <img width="250" height="400" alt="evolution_cycle" src="https://github.com/user-attachments/assets/4d721de2-e3c5-458b-8bb4-09d60c2b0112" />
 
 #### ■ 戦術進化ツリー (捕食者:Predator / 被食者:Prey)
-<img width="650" height="800" alt="lineage_tree_ev0-9_predator" src="https://github.com/user-attachments/assets/c8b3c31f-c546-4e15-8057-46c7e9d23938" />
+<img width="600" height="720" alt="lineage_tree_ev0-9_predator" src="https://github.com/user-attachments/assets/c8b3c31f-c546-4e15-8057-46c7e9d23938" />
 
-<img width="650" height="550" alt="lineage_tree_ev0-9_prey" src="https://github.com/user-attachments/assets/786c4256-bd1d-41b5-9f66-f647a5d8ed45" />
+<img width="600" height="500" alt="lineage_tree_ev0-9_prey" src="https://github.com/user-attachments/assets/786c4256-bd1d-41b5-9f66-f647a5d8ed45" />
 
 • 横実線：戦術の生存期間  
 • 縦太線：戦術の派生（同系列内で戦術が改良され進化する過程）  
@@ -147,22 +147,22 @@ FSM の状態・遷移を GA が進化させ、戦術を最適化する
 ・gen8  
     CHASE が再最大化 → 逃避 prey に対する対抗進化  
 ・gen9  
-    FLANK＋ENCIRCLE＋ATTACK が同時強化 → 複合戦術への再編成（第4周期）  
+    FLANK＋ENCIRCLE＋ATTACK が同時強化 → 複合戦術への再編成    
 
 #### ◇ 被食者(Prey) の戦術進化ツリー：
-結集 → 逃避 → 集団維持 → 回避 → 再結集 → 再逃避という “循環＋複合化” が成立している。  
+結集 → 逃避 → 集団維持 → 回避 → 再結集 → 再逃避という “循環＋複合化” が成立している。   
   
 ・gen0〜gen2  
-    REGROUP（結集）/ ESCAPE（逃避）/ GROUP_CENTER（集団維持）/ EVASIVE（回避） が循環しながら強弱を変える。  
+    REGROUP（結集）/ ESCAPE（逃避）/ GROUP_CENTER（集団維持）/ EVASIVE（回避） が循環しながら強弱を変える。    
 ・gen3〜gen5  
     EVASIVE＋ESCAPE が主役 / GROUP_CENTER が補助 → 逃避フェーズ  
 ・gen6  
-    GROUP_CENTER＋REGROUP＋EVASIVE＋ESCAPE が同時強化 → 複合戦術フェーズ  
+    GROUP_CENTER＋REGROUP＋EVASIVE＋ESCAPE が同時強化 → 複合戦術フェーズ   
 ・gen7  
-    REGROUP が最大化 → 結集フェーズの再来  
-・gen8〜gen9  
-    EVASIVE＋ESCAPE が最大化 / GROUP_CENTER が急減 → 逃避フェーズの再来    
-  
+    REGROUP が最大化 → 結集フェーズの再来   
+・gen8〜gen9   
+    EVASIVE＋ESCAPE が最大化 / GROUP_CENTER が急減 → 逃避フェーズの再来     
+   
 #### ■ 捕食者と被食者の共進化 GA（Co-evolution GA）
 本研究では、捕食者と被食者が互いの戦術に適応し続ける“共進化 GA（Co-evolution GA）” を採用している 
 <img width="400" height="150" alt="Co-evolution_GA" src="https://github.com/user-attachments/assets/c877fdec-55b3-476d-9b37-a48253479968" />
@@ -170,7 +170,7 @@ FSM の状態・遷移を GA が進化させ、戦術を最適化する
 ・ 捕食者 GA：現時点の 被食者 を相手に、捕獲に有利な戦術パラメータを進化  
 ・ 被食者 GA：進化した 捕食者 を相手に、生存に有利な戦術パラメータを進化   
   
-捕食者と被食者を順番に入れ替えて更新することで、Fitness が揺れながら相互適応する共進化ダイナミクスが形成される  
+捕食者と被食者を順番に更新することで、Fitness が揺れながら相互適応する共進化ダイナミクスが形成される  
 評価では、複数試行の平均化・正規化・複数指標の合算によりノイズを抑制する。 共進化 GA では、この揺らぎ自体が適応の源泉となり、 ノイズは自然な進化要素として機能する
 ・ 捕食者と被食者が互いの戦術に応じて進化  
 ・ 戦術の軍拡競争（arms race）が自然に発生  
