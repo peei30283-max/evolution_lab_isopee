@@ -173,7 +173,7 @@ FSM の状態・遷移を GA が進化させ、戦術を最適化する
     EVASIVE＋ESCAPE が最大化 / GROUP_CENTER が急減 → 逃避フェーズの再来    
    
 #### ■ 捕食者と被食者の共進化 GA（Co-evolution GA）
-本研究では、捕食者と被食者がそれぞれ相手の戦術に適応し続ける“共進化 GA（Co-evolution GA）” を採用している 
+本研究では、捕食者と被食者がそれぞれ相手の 「戦術」 に適応し続ける“共進化 GA（Co-evolution GA）” を採用している 
 <img width="400" height="150" alt="Co-evolution_GA" src="https://github.com/user-attachments/assets/c877fdec-55b3-476d-9b37-a48253479968" />
 
 ・ 捕食者 GA：現時点の 被食者 を相手に、捕獲に有利な戦術パラメータを進化  
