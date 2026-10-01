@@ -128,6 +128,51 @@ FSM の状態・遷移を GA が進化させ、戦術を最適化する
 
 <img width="650" height="550" alt="lineage_tree_ev0-9_prey" src="https://github.com/user-attachments/assets/786c4256-bd1d-41b5-9f66-f647a5d8ed45" />
 
+• 横実線：戦術の生存期間  
+• 縦太線：戦術の派生（同系列内で戦術が改良され進化する過程）  
+• 斜め破線：捕食者／被食者間で観測された応答関係  
+• “X”: 該当戦術系列がその世代で終端（淘汰）したことを示す
+
+#### ◇ 被食者(Prey) の戦術進化ツリー：
+結集 → 逃避 → 集団維持 → 回避 → 再結集 → 再逃避という “循環＋複合化” が成立している。
+  
+・gen0〜gen2  
+REGROUP（結集）/ ESCAPE（逃避）/ GROUP_CENTER（集団維持）/ EVASIVE（回避） が循環しながら強弱を変える。
+
+・gen3〜gen5  
+EVASIVE＋ESCAPE が主役 / GROUP_CENTER が補助 → 逃避フェーズ
+
+・gen6  
+GROUP_CENTER＋REGROUP＋EVASIVE＋ESCAPE が同時強化 → 複合戦術フェーズ
+
+・gen7  
+REGROUP が最大化 → 結集フェーズの再来
+
+・gen8〜gen9  
+EVASIVE＋ESCAPE が最大化 / GROUP_CENTER が急減 → 逃避フェーズの再来（第4周期）
+
+#### ◇ 捕食者(Predator) の戦術進化ツリー：
+包囲 → 攻撃 → 包囲 → 追跡 → 包囲 → 側面圧力 → 追跡 → 側面圧力＋包囲＋攻撃　という“循環＋再編成” が成立している。
+  
+・gen0〜gen2  
+ENCIRCLE（包囲）/ CLUSTER_ENCIRCLE（クラスタ包囲）/ ATTACK（攻撃）/ CHASE（追跡） が循環
+
+・gen3〜gen5  
+CHASE が最大化 → 追跡フェーズ
+
+・gen6  
+包囲＋追跡＋攻撃の複合戦術 → 複合化フェーズ
+
+・gen7  
+FLANK（側面圧力）が最大化 → 結集 prey に対する対抗進化
+
+・gen8  
+CHASE が再最大化 → 逃避 prey に対する対抗進化
+
+・gen9  
+FLANK＋ENCIRCLE＋ATTACK が同時強化 → 複合戦術への再編成（第4周期）
+
+  
 #### ■ 捕食者と被食者の共進化 GA（Co-evolution GA）
 本研究では、捕食者と被食者が互いの戦術に適応し続ける“共進化 GA（Co-evolution GA）” を採用している 
 <img width="400" height="150" alt="Co-evolution_GA" src="https://github.com/user-attachments/assets/c877fdec-55b3-476d-9b37-a48253479968" />
