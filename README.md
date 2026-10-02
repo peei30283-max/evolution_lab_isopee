@@ -124,7 +124,8 @@ FSM の状態・遷移を GA が進化させ、戦術を最適化する
 <img width="250" height="400" alt="evolution_cycle" src="https://github.com/user-attachments/assets/4d721de2-e3c5-458b-8bb4-09d60c2b0112" />
 
 ### ■ 本研究の進化プロセス
-本研究の進化プロセスは、LLM による戦術生成と GA による最適化を統合した3層構造のループとして設計されている。まず、LLM 戦術進化サイクル（gen0〜gen9）において、LLM が生成した戦術 FSM を初期戦術として採用し、各世代 genx に対して GA による戦術改善を行う。続いて、各 genx に対して GA 改善サイクルを N回(この例では10 回）実行し、FSM に付随する連続パラメータ（閾値・速度・距離係数など）を最適化する。  
+本研究の進化プロセスは、LLM による戦術生成と GA による最適化を統合した3層構造のループとして設計されている。  
+まず、LLM 戦術進化サイクル（gen0〜gen9）において、LLM が生成した戦術 FSM を初期戦術として採用し、各世代 genx に対して GA による戦術改善を行う。続いて、各 genx に対して GA 改善サイクルを N回(この例では10 回）実行し、FSM に付随する連続パラメータ（閾値・速度・距離係数など）を最適化する。  
 
 さらに、各 GA 改善サイクルの内部では、捕食者と被食者の戦術パラメータを交互に進化させる Co-evolution サイクルを　M回(この例では10 回）実行する。具体的には、まず捕食者側の GA を適用し、被食者の戦術を固定した状態で捕食者のパラメータを改善する。次に、捕食者の戦術を固定した状態で被食者側の GA を適用し、被食者のパラメータを改善する。この交互進化により、両者は互いの戦術に応答しながら適応を進める Red Queen 型の軍拡競争を形成する。 
 
@@ -147,15 +148,16 @@ FSM の状態・遷移を GA が進化させ、戦術を最適化する
 
 #### ■ Predator / Prey Fitness
 LM 戦術進化サイクル（gen0）における適応度を示す。
-横軸は Co-evolution サイクル、左軸は捕食者の適応度、右軸は被食者の適応度を示す。赤線の捕食者はサイクル進行に伴い大きく変動しながら適応度を上昇させ、青の破線の被食者は高い適応度を維持しつつ捕食者の進化に応じて微調整している。両者の波形のずれは、捕食者と被食者が互いの進化に反応する Red Queen 型の軍拡競争を表している。  
-  <img width="550" height="450" alt="co-evolution_fitness" src="https://github.com/user-attachments/assets/167c1d6d-8aaf-4e77-9935-5d18b5aeaeca" />
+横軸は Co-evolution サイクル、左軸は捕食者の適応度、右軸は被食者の適応度を示す。赤線の捕食者はサイクル進行に伴い大きく変動しながら適応度を上昇させ、青の破線の被食者は高い適応度を維持しつつ捕食者の進化に応じて微調整している。両者の波形のずれは、捕食者と被食者が互いの進化に反応する Red Queen 型の軍拡競争を表している。 
+
+  <img width="500" height="420" alt="co-evolution_fitness" src="https://github.com/user-attachments/assets/167c1d6d-8aaf-4e77-9935-5d18b5aeaeca" />
   
 #### ■ Density Entropy & Mean Distanc
 LM 戦術進化サイクル（gen0）における密度エントロピー/平均距離を示す。
 上段は被食者集団の密度エントロピー、下段は平均距離を示し、いずれも Co-evolution サイクルに伴う変化を表す。両指標は周期的に上下し、捕食者の進化に応じて被食者が散開と再集合を切り替えていることが分かる。密度エントロピーの山と平均距離の山が同期しており、集団構造の広がりと戦術切り替えが一貫して連動していることを示している。  
-  <img width="500" height="500" alt="co-evolution_metrics" src="https://github.com/user-attachments/assets/0aadf62a-032b-4181-89fe-8bf423691192" />
+  <img width="450" height="450" alt="co-evolution_metrics" src="https://github.com/user-attachments/assets/28f6bf0c-1019-48d2-b3b1-17aec172b12c" />
 
-◇ これらの結果から以下のことがわかる 
+◇ これらの結果から以下のことがわかる  
 ・ gen0 の LLM 戦術は GA 改善と共進化サイクルに対して崩壊せず適応し続けた  
 ・ Predator/Prey Fitness の波形は、両者が互いの進化に応答する Red Queen 型軍拡競争を示す  
 ・ Density Entropy と Mean Distance の同期した変動は、被食者が集団構造を動的に再編成していることを示す  
