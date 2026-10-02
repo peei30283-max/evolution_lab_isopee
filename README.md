@@ -123,7 +123,40 @@ FSM の状態・遷移を GA が進化させ、戦術を最適化する
 
 <img width="250" height="400" alt="evolution_cycle" src="https://github.com/user-attachments/assets/4d721de2-e3c5-458b-8bb4-09d60c2b0112" />
 
+### ■ 本研究の進化プロセス
+本研究の進化プロセスは、LLM による戦術生成と GA による最適化を統合した3層構造のループとして設計されている。まず、LLM 戦術進化サイクル（gen0〜gen9）において、LLM が生成した戦術 FSM を初期戦術として採用し、各世代 genx に対して GA による戦術改善を行う。続いて、各 genx に対して GA 改善サイクルを N回(この例では10 回）実行し、FSM に付随する連続パラメータ（閾値・速度・距離係数など）を最適化する。  
+
+さらに、各 GA 改善サイクルの内部では、捕食者と被食者の戦術パラメータを交互に進化させる Co-evolution サイクルを　M回(この例では10 回）実行する。具体的には、まず捕食者側の GA を適用し、被食者の戦術を固定した状態で捕食者のパラメータを改善する。次に、捕食者の戦術を固定した状態で被食者側の GA を適用し、被食者のパラメータを改善する。この交互進化により、両者は互いの戦術に応答しながら適応を進める Red Queen 型の軍拡競争を形成する。 
+
+最終的に、各 genx に対する GA 改善サイクルおよび Co-evolution サイクルの結果として、捕食者・被食者の適応度（fitness）と、集団構造を表す各種メトリクス（密度エントロピー・平均距離など）を記録し、進化過程の動態を可視化する。
+
+#### ■ 捕食者と被食者の共進化 GA（Co-evolution GA）
+本研究では、捕食者と被食者がそれぞれ相手の行動に適応し続ける“共進化 GA（Co-evolution GA）” を採用している 
+<img width="400" height="150" alt="Co-evolution_GA" src="https://github.com/user-attachments/assets/c877fdec-55b3-476d-9b37-a48253479968" />
+
+・ 捕食者 GA：現時点の 被食者 を相手に、捕獲に有利な戦術パラメータを進化  
+  
+・ 被食者 GA：進化した 捕食者 を相手に、生存に有利な戦術パラメータを進化   
+  
+捕食者と被食者を順番に更新することで、Fitness が揺れながら相互適応する共進化ダイナミクスが形成される  
+評価では、複数試行の平均化・正規化・複数指標の合算によりノイズを抑制する。 共進化 GA では、この揺らぎ自体が適応の源泉となり、 ノイズは自然な進化要素として機能する
+・ 捕食者と被食者が互いの戦術に応じて進化  
+・ 戦術の軍拡競争（arms race）が自然に発生  
+・ 評価の揺らぎが戦術多様性と適応を促進  
+
+
+#### ■ Predator / Prey Fitness
+横軸は Co-evolution サイクル、左軸は捕食者の適応度、右軸は被食者の適応度を示す。赤線の捕食者はサイクル進行に伴い大きく変動しながら適応度を上昇させ、青の破線の被食者は高い適応度を維持しつつ捕食者の進化に応じて微調整している。両者の波形のずれは、捕食者と被食者が互いの進化に反応する Red Queen 型の軍拡競争を表している。  
+  <img width="600" height="350" alt="co-evolution_fitness" src="https://github.com/user-attachments/assets/167c1d6d-8aaf-4e77-9935-5d18b5aeaeca" />
+  
+#### ■ Density Entropy & Mean Distanc
+上段は被食者集団の密度エントロピー、下段は平均距離を示し、いずれも Co-evolution サイクルに伴う変化を表す。両指標は周期的に上下し、捕食者の進化に応じて被食者が散開と再集合を切り替えていることが分かる。密度エントロピーの山と平均距離の山が同期しており、集団構造の広がりと戦術切り替えが一貫して連動していることを示している。  
+  <img width="600" height="600" alt="co-evolution_metrics" src="https://github.com/user-attachments/assets/0aadf62a-032b-4181-89fe-8bf423691192" />
+
+
+
 #### ■ 戦術進化ツリー (捕食者:Predator / 被食者:Prey)
+以下に本研究の LLM による戦術生成と GA による最適化を統合した改善ループを 10回実行した際の、捕食者、被食者それぞれの戦術進化の系統ツリー図を示す。
 <img width="600" height="720" alt="lineage_tree_ev0-9_predator" src="https://github.com/user-attachments/assets/c8b3c31f-c546-4e15-8057-46c7e9d23938" />
 
 <img width="600" height="500" alt="lineage_tree_ev0-9_prey" src="https://github.com/user-attachments/assets/786c4256-bd1d-41b5-9f66-f647a5d8ed45" />
@@ -172,19 +205,7 @@ FSM の状態・遷移を GA が進化させ、戦術を最適化する
 ・gen8〜gen9  
     EVASIVE＋ESCAPE が最大化 / GROUP_CENTER が急減 → 逃避フェーズの再来    
    
-#### ■ 捕食者と被食者の共進化 GA（Co-evolution GA）
-本研究では、捕食者と被食者がそれぞれ相手の行動に適応し続ける“共進化 GA（Co-evolution GA）” を採用している 
-<img width="400" height="150" alt="Co-evolution_GA" src="https://github.com/user-attachments/assets/c877fdec-55b3-476d-9b37-a48253479968" />
 
-・ 捕食者 GA：現時点の 被食者 を相手に、捕獲に有利な戦術パラメータを進化  
-  
-・ 被食者 GA：進化した 捕食者 を相手に、生存に有利な戦術パラメータを進化   
-  
-捕食者と被食者を順番に更新することで、Fitness が揺れながら相互適応する共進化ダイナミクスが形成される  
-評価では、複数試行の平均化・正規化・複数指標の合算によりノイズを抑制する。 共進化 GA では、この揺らぎ自体が適応の源泉となり、 ノイズは自然な進化要素として機能する
-・ 捕食者と被食者が互いの戦術に応じて進化  
-・ 戦術の軍拡競争（arms race）が自然に発生  
-・ 評価の揺らぎが戦術多様性と適応を促進  
   
 #### ■ RL (強化学習)と本研究の違い
 ① 学習対象が違う  
