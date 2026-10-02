@@ -132,7 +132,8 @@ FSM の状態・遷移を GA が進化させ、戦術を最適化する
 最終的に、各 genx に対する GA 改善サイクルおよび Co-evolution サイクルの結果として、捕食者・被食者の適応度（fitness）と、集団構造を表す各種メトリクス（密度エントロピー・平均距離など）を記録し、進化過程の動態を可視化する。
 
 #### ■ 捕食者と被食者の共進化 GA（Co-evolution GA）
-本研究では、捕食者と被食者がそれぞれ相手の行動に適応し続ける“共進化 GA（Co-evolution GA）” を採用している 
+本研究では、捕食者と被食者がそれぞれ相手の行動に適応し続ける“共進化 GA（Co-evolution GA）” を採用している   
+
 <img width="400" height="150" alt="Co-evolution_GA" src="https://github.com/user-attachments/assets/c877fdec-55b3-476d-9b37-a48253479968" />
 
 ・ 捕食者 GA：現時点の 被食者 を相手に、捕獲に有利な戦術パラメータを進化  
@@ -155,6 +156,7 @@ LM 戦術進化サイクル（gen0）における適応度を示す。
 #### ■ Density Entropy & Mean Distanc
 LM 戦術進化サイクル（gen0）における密度エントロピー/平均距離を示す。
 上段は被食者集団の密度エントロピー、下段は平均距離を示し、いずれも Co-evolution サイクルに伴う変化を表す。両指標は周期的に上下し、捕食者の進化に応じて被食者が散開と再集合を切り替えていることが分かる。密度エントロピーの山と平均距離の山が同期しており、集団構造の広がりと戦術切り替えが一貫して連動していることを示している。  
+
   <img width="450" height="450" alt="co-evolution_metrics" src="https://github.com/user-attachments/assets/28f6bf0c-1019-48d2-b3b1-17aec172b12c" />
 
 ◇ これらの結果から以下のことがわかる  
